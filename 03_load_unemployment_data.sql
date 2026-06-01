@@ -1,0 +1,34 @@
+-- ============================================================
+-- Project: FRED Macroeconomic Analysis
+-- File: 03_load_unemployment_data.sql
+-- Description: Data ingestion for National Unemployment Rate Dataset
+-- Author: Sadaf Naveed
+-- Date: May 2026
+-- Version: 1.0
+-- ============================================================
+
+-- ============================================================
+-- DATA SOURCE
+-- ============================================================
+-- Source: Federal Reserve Economic Data (FRED)
+-- Website: fred.stlouisfed.org
+-- Series ID: UNRATE
+-- Series Name: National Unemployment Rate
+-- Frequency: Monthly
+-- Date Range: January 1948 - Present
+-- Baseline: N/A (percentage values)
+-- Download Format: CSV
+
+-- ============================================================
+-- LOAD METHOD
+-- ============================================================
+-- Data loaded using Snowflake web UI file upload wizard
+-- File uploaded directly into FRED_DB.PUBLIC.UNEMPLOYMENT_DATA table
+-- Target table was pre-created with correct schema before loading
+
+-- ============================================================
+-- TARGET TABLE STRUCTURE
+-- ============================================================
+-- Table: FRED_DB.PUBLIC.UNEMPLOYMENT_DATA
+-- OBSERVATION_DATE DATE    -- Monthly observation date
+-- UNEMPLOYMENT_RATE FLOAT   -- Unemployment rate (percentage)

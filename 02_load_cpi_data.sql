@@ -1,0 +1,34 @@
+-- ============================================================
+-- PROJECT: FRED Macroeconomic Analysis
+-- File: 02_load_cpi_data.sql
+-- Description: Data ingestion for Consumer Price Index (CPI) dataset
+-- Author: Sadaf Naveed
+-- Date: May 2026
+-- Version: 1.0
+-- ============================================================
+
+-- ============================================================
+-- DATA SOURCE
+-- ============================================================
+-- Source: Federal Reserve Economic Data (FRED)
+-- Website: fred.stlouisfed.org
+-- Series ID: CPIAUCSL
+-- Series Name: Consumer Price Index for All Urban Consumers
+-- Frequency: Monthly
+-- Date Range: January 1947 - Present
+-- Baseline: 1982-1984 = 100
+-- Download Format: CSV
+
+-- ============================================================
+-- LOAD METHOD
+-- ============================================================
+-- Data loaded using Snowflake web UI file upload wizard
+-- File uploaded directly into FRED_DB.PUBLIC.CPI_DATA table
+-- Target table was pre-created with correct schema before loading
+
+-- ============================================================
+-- TARGET TABLE STRUCTURE
+-- ============================================================
+-- Table: FRED_DB.PUBLIC.CPI_DATA
+-- OBSERVATION_DATE DATE    -- Monthly observation date
+-- CPI_VALUE        FLOAT   -- CPI index value (1982-1984 baseline = 100)
